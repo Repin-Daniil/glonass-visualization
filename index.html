@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ГЛОНАСС</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="glcanvas"></canvas>
+<div id="info">ГЛОНАСС</div>
+<div id="controls">
+  <label><input type="checkbox" id="showOrbits" checked> Показать орбиты</label>
+  <label><input type="checkbox" id="showEarthAxis" checked> Показать земную ось</label>
+  
+  <div class="slider-container">
+    <label>Скорость вращения спутников:
+      <input type="range" id="rotationSpeed" min="0.01" max="0.5" step="0.01" value="0.05">
+      <span id="speedValue">0.05</span>
+    </label>
+  </div>
+  
+  <div class="slider-container">
+    <label>Размер спутников:
+      <input type="range" id="satSize" min="1" max="10" step="1" value="3">
+      <span id="sizeValue">3</span>
+    </label>
+  </div>
+  
+  <button id="resetCamera">Сбросить камеру</button>
+</div>
+
+<div id="legend">
+  <h3>Обозначения</h3>
+  <div><span class="color-box" style="background-color: rgb(0, 128, 255)"></span>Орбитальная плоскость 1 (0°)</div>
+  <div><span class="color-box" style="background-color: rgb(0, 255, 0)"></span>Орбитальная плоскость 2 (120°)</div>
+  <div><span class="color-box" style="background-color: rgb(255, 0, 0)"></span>Орбитальная плоскость 3 (240°)</div>
+  <div><span class="color-box" style="background-color: rgb(255, 255, 255)"></span>Земная ось</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
